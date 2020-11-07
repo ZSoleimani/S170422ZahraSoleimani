@@ -3,6 +3,7 @@
     android:shape="line">
     <stroke android:width="2dp" android:color="#FF333333"/>
     <padding android:bottom="20dp"/>
+    <size android:width="20dp"/>
 
 
 
