@@ -1,7 +1,9 @@
 package com.example.s170422zahrasoleimani;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -91,6 +93,37 @@ public class MainActivity extends AppCompatActivity {
                 charViews[k].setTextColor(Color.BLACK);
             }
         }
+        if (correct){
+            if (numCorrect==nunChars){
+                disableButtons();
+                AlertDialog.Builder winBuild=new AlertDialog.Builder(this);
+                winBuild.setTitle("words");
+                winBuild.setMessage("You Win!\n\n The answare was:"+currentWord );
+                winBuild.setPositiveButton("Play Again",
+                        new DialogInterface.OnClickListener(){
+                    @Override
+                    public  void onClick(DialogInterface dialogInterface, int i){
+                        playGame();
+                    }
+                });
+                winBuild.setNegativeButton("Exit",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int i) {
+                                fileList();
 
+                            }
+                        });
+                winBuild.show();
+            }
+        }
+
+    }
+
+    private void disableButtons() {
+        int numLetters=letters.getChildCount();
+        for (int i=0; i<numLetters; i++) {
+            letters.getChildAt(i).setEnabled(false);
+        }
     }
 }
