@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private GridView letters;
     private LetterAdapter letterAdapter;
 
+    private int currentPic;
+    private int nunChars;
+    private int numCorrect;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,5 +71,26 @@ public class MainActivity extends AppCompatActivity {
 
         letterAdapter=new LetterAdapter(this);
         letters.setAdapter(letterAdapter);
+
+        currentPic=0;
+        nunChars=currentWord.length();
+        numCorrect=0;
+
+    }
+
+    public void letterPressed(View view){
+        String letter=((TextView)view).getText().toString();
+        char letterChar=letter.charAt(0);
+        view.setEnabled(false);
+        view.setBackgroundResource(R.drawable.letter_down);
+        boolean correct=false;
+        for (int k=0; k<currentWord.length();k++){
+            if (currentWord.charAt(k)==letterChar){
+                correct=true;
+                numCorrect++;
+                charViews[k].setTextColor(Color.BLACK);
+            }
+        }
+
     }
 }
