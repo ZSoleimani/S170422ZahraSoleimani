@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView[] charViews;
     private ImageView imageView;
 
+    private GridView letters;
+    private LetterAdapter letterAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         currentWord="";
         wordLinearLayout = findViewById(R.id.word);
         imageView=findViewById(R.id.imageView);
+
+        letters=findViewById(R.id.letters);
 
         playGame();
     }
@@ -60,5 +66,7 @@ public class MainActivity extends AppCompatActivity {
             wordLinearLayout.addView(charViews[c]);
         }
 
+        letterAdapter=new LetterAdapter(this);
+        letters.setAdapter(letterAdapter);
     }
 }
