@@ -3,6 +3,7 @@ package com.example.s170422zahrasoleimani;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     public void letterPressed(View view){
         String letter=((TextView)view).getText().toString();
         char letterChar=letter.charAt(0);
@@ -148,20 +150,9 @@ public class MainActivity extends AppCompatActivity {
             loseBuild.setTitle("words");
             loseBuild.setMessage("Game over!\n\n The answare was:"+currentWord );
             loseBuild.setPositiveButton("Play Again",
-                    new DialogInterface.OnClickListener(){
-                        @Override
-                        public  void onClick(DialogInterface dialogInterface, int i){
-                            playGame();
-                        }
-                    });
+                    (dialogInterface, i) -> playGame());
             loseBuild.setNegativeButton("Exit",
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int i) {
-                            fileList();
-
-                        }
-                    });
+                    (dialog, i) -> fileList());
             loseBuild.show();
 
 

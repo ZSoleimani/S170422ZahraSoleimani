@@ -10,8 +10,8 @@ import android.widget.Button;
 
 public class LetterAdapter extends BaseAdapter {
 
-    private String[] letters;
-    private LayoutInflater letterInflater;
+    private final String[] letters;
+    private final LayoutInflater letterInflater;
 
     public LetterAdapter(Context context){
         letters=new String[26];
