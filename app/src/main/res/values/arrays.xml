@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <sring-array name="words">
+        <item>ANDROID</item>
+        <item>COMPUTER</item>
+        <item>TEA</item>
+        <item>HAPPY</item>
+        <item>BODY</item>
+        <item>TABLET</item>
+        <item>KISS</item>
+        <item>LADY</item>
+        <item>CALL</item>
+        <item>LAPTOP</item>
+        <item>PINK</item>
+    </sring-array>
+
+</resources>
