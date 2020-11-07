@@ -118,6 +118,55 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        else if(currentPic<6){
+            imageView.setVisibility(View.VISIBLE);
+            switch (currentPic) {
+                case 0:
+                    imageView.setImageDrawable(getResources().getDrawable(R.drawable.p1));
+                    break;
+                case 1:
+                    imageView.setImageDrawable(getResources().getDrawable(R.drawable.p2));
+                    break;
+                case 2:
+                    imageView.setImageDrawable(getResources().getDrawable(R.drawable.p3));
+                    break;
+                case 3:
+                    imageView.setImageDrawable(getResources().getDrawable(R.drawable.p4));
+                    break;
+                case 4:
+                    imageView.setImageDrawable(getResources().getDrawable(R.drawable.p5));
+                    break;
+                case 5:
+                    imageView.setImageDrawable(getResources().getDrawable(R.drawable.p6));
+                    break;
+            }
+            currentPic++;
+        }
+        else{
+            disableButtons();
+            AlertDialog.Builder loseBuild=new AlertDialog.Builder(this);
+            loseBuild.setTitle("words");
+            loseBuild.setMessage("Game over!\n\n The answare was:"+currentWord );
+            loseBuild.setPositiveButton("Play Again",
+                    new DialogInterface.OnClickListener(){
+                        @Override
+                        public  void onClick(DialogInterface dialogInterface, int i){
+                            playGame();
+                        }
+                    });
+            loseBuild.setNegativeButton("Exit",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int i) {
+                            fileList();
+
+                        }
+                    });
+            loseBuild.show();
+
+
+        }
+
     }
 
     private void disableButtons() {
