@@ -48,14 +48,106 @@
 
     </GridView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hi"
+    <GridView
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
         android:layout_gravity="center"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:textColor="@android:color/holo_orange_light"
-         />
+        android:background="#FF4444"
+        android:horizontalSpacing="5dp"
+        android:numColumns="7"
+        android:padding="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </GridView>
+
+    <GridView
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#FF4444"
+        android:horizontalSpacing="5dp"
+        android:numColumns="7"
+        android:padding="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </GridView>
+
+    <GridView
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#FF4444"
+        android:horizontalSpacing="5dp"
+        android:numColumns="7"
+        android:padding="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </GridView>
+    <GridView
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#FF4444"
+        android:horizontalSpacing="5dp"
+        android:numColumns="7"
+        android:padding="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </GridView>
+    <GridView
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#FF4444"
+        android:horizontalSpacing="5dp"
+        android:numColumns="7"
+        android:padding="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </GridView>
+    <GridView
+        android:id="@+id/line6"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#FF4444"
+        android:horizontalSpacing="5dp"
+        android:numColumns="7"
+        android:padding="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </GridView>
+    <GridView
+        android:id="@+id/line7"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#FF4444"
+        android:horizontalSpacing="5dp"
+        android:numColumns="7"
+        android:padding="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </GridView>
+
+
 
 </LinearLayout>
