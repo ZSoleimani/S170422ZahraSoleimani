@@ -7,21 +7,17 @@ import android.widget.LinearLayout;
 
 import java.util.Random;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.Random;
+//https://faradars.org/courses/fvand9901-project-oriented-android-studio-creating-word-guessing-game?fbclid=IwAR3AU75_q82Xvy4vNIAjDEwsOgPjprPNB9CbW9i5ytz9_HLQ90-W2bwkbSk
 
 public class GameActivity extends AppCompatActivity {
 
@@ -33,7 +29,6 @@ public class GameActivity extends AppCompatActivity {
     private ImageView imageView;
 
     private GridView letters;
-    private LetterAdapter letterAdapter;
 
     private int currentPic;
     private int nunChars;
@@ -55,6 +50,7 @@ public class GameActivity extends AppCompatActivity {
         playGame();
     }
 
+    @SuppressLint("SetTextI18n")
     private void playGame(){
         imageView.setVisibility(View.INVISIBLE);
         String newWord=words[random.nextInt(words.length)];
@@ -78,7 +74,7 @@ public class GameActivity extends AppCompatActivity {
             wordLinearLayout.addView(charViews[c]);
         }
 
-        letterAdapter=new LetterAdapter(this);
+        LetterAdapter letterAdapter = new LetterAdapter(this);
         letters.setAdapter(letterAdapter);
 
         currentPic=0;
@@ -108,20 +104,9 @@ public class GameActivity extends AppCompatActivity {
                 winBuild.setTitle("words");
                 winBuild.setMessage("You Win!\n\n The answare was:"+currentWord );
                 winBuild.setPositiveButton("Play Again",
-                        new DialogInterface.OnClickListener(){
-                            @Override
-                            public  void onClick(DialogInterface dialogInterface, int i){
-                                playGame();
-                            }
-                        });
+                        (dialogInterface, i) -> playGame());
                 winBuild.setNegativeButton("Exit",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int i) {
-                                fileList();
-
-                            }
-                        });
+                        (dialog, i) -> fileList());
                 winBuild.show();
             }
         }
@@ -160,10 +145,7 @@ public class GameActivity extends AppCompatActivity {
             loseBuild.setNegativeButton("Exit",
                     (dialog, i) -> fileList());
             loseBuild.show();
-
-
         }
-
     }
 
     private void disableButtons() {
