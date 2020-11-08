@@ -35,15 +35,26 @@
     </LinearLayout>
 
     <GridView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/letters"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
         android:layout_gravity="center"
         android:background="#FF000000"
         android:horizontalSpacing="5dp"
-        android:verticalSpacing="5dp"
         android:numColumns="7"
-        android:padding="5dp"
-        android:stretchMode="columnWidth"/>
+        android:padding="3dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </GridView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hi_and_welcome_to_galgeleg_game"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="@android:color/holo_orange_light"
+         />
 
 </LinearLayout>
