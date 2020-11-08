@@ -12,7 +12,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="60dp"
-        android:text="@string/you_have_won"
+        android:text="@string/congrats_you_have_won"
         android:textAlignment="center"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -35,14 +35,14 @@
         android:gravity="center_horizontal" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/highscores"
         android:layout_width="263dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="516dp"
         android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
-        android:text="..."
+        android:text="Incorrect guess nr."
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,14 +51,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/list"
         android:layout_width="93dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="580dp"
         android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
-        android:text="..."
+        android:text="word"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"

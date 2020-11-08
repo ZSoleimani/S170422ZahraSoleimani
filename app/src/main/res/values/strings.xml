@@ -7,6 +7,6 @@
     <string name="hi">Hi...</string>
     <string name="game_over">game over</string>
     <string name="the_word">the word was</string>
-    <string name="you_have_won">you have won</string>
+    <string name="congrats_you_have_won">you have won</string>
     <string name="Number_of_tries">Number of tries</string>
 </resources>
