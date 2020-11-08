@@ -18,7 +18,7 @@ public class StartGame extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_game);
         gameStart = findViewById(R.id.button);
-        gameStart.setOnClickListener((View.OnClickListener) this);
+        gameStart.setOnClickListener(this);
         playerName = findViewById(R.id.gameName);
     }
 

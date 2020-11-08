@@ -52,7 +52,7 @@ public class GameActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void playGame(){
-        imageView.setVisibility(View.INVISIBLE);
+        imageView.setVisibility(View.VISIBLE);
         String newWord=words[random.nextInt(words.length)];
 
         while (newWord.equals(currentWord))
