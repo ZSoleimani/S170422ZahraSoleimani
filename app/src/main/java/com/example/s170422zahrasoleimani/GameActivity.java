@@ -101,8 +101,8 @@ public class GameActivity extends AppCompatActivity {
             if (numCorrect==nunChars){
                 disableButtons();
                 AlertDialog.Builder winBuild=new AlertDialog.Builder(this);
-                winBuild.setTitle("words");
-                winBuild.setMessage("You Win!\n\n The answare was:"+currentWord );
+                winBuild.setTitle("***Congrats***");
+                winBuild.setMessage("You Win! \n\n The answare was: "+ currentWord );
                 winBuild.setPositiveButton("Play Again",
                         (dialogInterface, i) -> playGame());
                 winBuild.setNegativeButton("Exit",
@@ -138,8 +138,7 @@ public class GameActivity extends AppCompatActivity {
         else{
             disableButtons();
             AlertDialog.Builder loseBuild=new AlertDialog.Builder(this);
-            loseBuild.setTitle("words");
-            loseBuild.setMessage("Game over!\n\n The answare was:"+currentWord );
+            loseBuild.setMessage("Game over! \n\n The answare was: "+ currentWord );
             loseBuild.setPositiveButton("Play Again",
                     (dialogInterface, i) -> playGame());
             loseBuild.setNegativeButton("Exit",
