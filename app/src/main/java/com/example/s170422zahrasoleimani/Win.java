@@ -9,27 +9,30 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class Win extends AppCompatActivity {
-  private int getNrOfWrongGuess;
-  private TextView getNrOfWrongGuessTextView;
 
-  SharedPreferences sharedPreferences;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_win);
+    private TextView getNrOfWrongGuessTextView;
 
-      getNrOfWrongGuess = getIntent().getByteExtra("getNrOfWrongGuess", (byte) 0);
+    SharedPreferences sharedPreferences;
 
-      getNrOfWrongGuessTextView = findViewById(R.id.getNrOfWrongGuess);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_win);
 
-      sharedPreferences = getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
-      win();
-  }
 
-    @SuppressLint("SetTextI18n")
-    private void win() {
-      getNrOfWrongGuessTextView.setText("" +getNrOfWrongGuess);
+        getNrOfWrongGuessTextView = findViewById(R.id.nrOfWrongGuessid);
+        Bundle bundle = getIntent().getExtras();
+
+        String data = bundle.getString("getNrOfWrongGuess");
+        getNrOfWrongGuessTextView.setText("Number of wrong guess: "+data + " Words");
+
+
+        /* getNrOfWrongGuess = getIntent().getByteExtra("AntalForkerteBogstaver", (byte) 0);   */
+
+        sharedPreferences = getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
     }
+
+
 
 }

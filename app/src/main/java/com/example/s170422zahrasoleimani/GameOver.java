@@ -19,16 +19,12 @@ public class GameOver extends AppCompatActivity {
         super.onCreate(savedInstantanceState);
         setContentView(R.layout.activity_game_over);
 
-        getWord = getIntent().getStringExtra("getWord");
-        getWordTextView = findViewById(R.id.getNrOfWrongGuess);
+        getWordTextView = findViewById(R.id.get_word_id);
 
-        sharedPreferences = getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
-        gameOver();
-    }
+        Bundle bundle = getIntent().getExtras();
+        String data = bundle.getString("getWord");
+        getWordTextView.setText(data);
 
-    @SuppressLint("SetTextI18n")
-    private void gameOver() {
-        getWordTextView.setText(" " + getWord);
     }
 }
 
