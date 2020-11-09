@@ -1,14 +1,37 @@
 package com.example.s170422zahrasoleimani;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
-public class GameOver extends AppCompatActivity  implements View.OnClickListener {
+import androidx.appcompat.app.AppCompatActivity;
+public class GameOver extends AppCompatActivity {
 
+    private String getWord;
+    private TextView getWordTextView;
+    SharedPreferences sharedPreferences;
+
+    @Override
+    protected void onCreate(Bundle savedInstantanceState) {
+        super.onCreate(savedInstantanceState);
+        setContentView(R.layout.activity_game_over);
+
+        getWord = getIntent().getStringExtra("getWord");
+        getWordTextView = findViewById(R.id.theWord);
+
+        sharedPreferences = getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
+        gameOver();
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void gameOver() {
+        getWordTextView.setText(" "+ getWord);
+    }
+
+
+    /*
     TextView wordView;
 
     @Override
@@ -28,5 +51,7 @@ public class GameOver extends AppCompatActivity  implements View.OnClickListener
         finish();
 
     }
+
+     */
 
 }

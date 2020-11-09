@@ -2,6 +2,7 @@ package com.example.s170422zahrasoleimani;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
@@ -20,6 +21,9 @@ import android.widget.TextView;
 //https://faradars.org/courses/fvand9901-project-oriented-android-studio-creating-word-guessing-game?fbclid=IwAR3AU75_q82Xvy4vNIAjDEwsOgPjprPNB9CbW9i5ytz9_HLQ90-W2bwkbSk
 
 public class GameActivity extends AppCompatActivity {
+
+    static Galgelogik galgelogik = new Galgelogik();
+
 
     private String[] words;
     private Random random;
@@ -99,17 +103,26 @@ public class GameActivity extends AppCompatActivity {
         }
         if (correct){
             if (numCorrect==nunChars){
+
+                Intent win = new Intent(GameActivity.this, Win.class);
+                startActivity(win);
+                }
+                /*
                 disableButtons();
+
                 AlertDialog.Builder winBuild=new AlertDialog.Builder(this);
+
                 winBuild.setTitle("***Congrats***");
                 winBuild.setMessage("You Win! \n\n The answare was: "+ currentWord );
                 winBuild.setPositiveButton("Play Again",
                         (dialogInterface, i) -> playGame());
                 winBuild.setNegativeButton("Exit",
-                        (dialog, i) -> fileList());
+                (dialog, i) -> fileList())
                 winBuild.show();
+
+                 */
             }
-        }
+
 
         else if(currentPic<6){
             imageView.setVisibility(View.VISIBLE);
@@ -136,14 +149,22 @@ public class GameActivity extends AppCompatActivity {
             currentPic++;
         }
         else{
+            /*
             disableButtons();
+
             AlertDialog.Builder loseBuild=new AlertDialog.Builder(this);
+
             loseBuild.setMessage("Game over! \n\n The answare was: "+ currentWord );
             loseBuild.setPositiveButton("Play Again",
                     (dialogInterface, i) -> playGame());
             loseBuild.setNegativeButton("Exit",
                     (dialog, i) -> fileList());
+
             loseBuild.show();
+             */
+            Intent gameOver = new Intent(GameActivity.this, GameOver.class);
+            startActivity(gameOver);
+
         }
     }
 
