@@ -24,7 +24,6 @@ public class GameActivity extends AppCompatActivity {
 
     static Galgelogik galgelogik = new Galgelogik();
 
-
     private String[] words;
     private Random random;
     private String currentWord;

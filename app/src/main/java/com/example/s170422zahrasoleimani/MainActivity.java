@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         new Handler().postDelayed(() -> {
-            Intent homeIntent = new Intent(MainActivity.this, StartGame.class);
+            Intent homeIntent = new Intent(MainActivity.this, GameActivity.class);
             startActivity(homeIntent);
             finish();
         },SPLASH_TIME_OUT);
