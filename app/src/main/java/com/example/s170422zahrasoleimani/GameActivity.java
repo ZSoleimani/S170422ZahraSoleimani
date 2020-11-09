@@ -103,6 +103,7 @@ public class GameActivity extends AppCompatActivity {
             if (numCorrect==nunChars){
 
                 Intent win = new Intent(GameActivity.this, Win.class);
+                win.putExtra("getNrOfWrongGuess",currentPic+"");
                 startActivity(win);
                 }
                 /*
@@ -161,6 +162,8 @@ public class GameActivity extends AppCompatActivity {
             loseBuild.show();
              */
             Intent gameOver = new Intent(GameActivity.this, GameOver.class);
+            gameOver.putExtra("getWord",currentWord);
+
             startActivity(gameOver);
 
         }
