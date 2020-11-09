@@ -18,8 +18,6 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-//https://faradars.org/courses/fvand9901-project-oriented-android-studio-creating-word-guessing-game?fbclid=IwAR3AU75_q82Xvy4vNIAjDEwsOgPjprPNB9CbW9i5ytz9_HLQ90-W2bwkbSk
-
 public class GameActivity extends AppCompatActivity {
 
     static Galgelogik galgelogik = new Galgelogik();
@@ -53,6 +51,7 @@ public class GameActivity extends AppCompatActivity {
         playGame();
     }
 
+    //https://faradars.org/courses/fvand9901-project-oriented-android-studio-creating-word-guessing-game?fbclid=IwAR3AU75_q82Xvy4vNIAjDEwsOgPjprPNB9CbW9i5ytz9_HLQ90-W2bwkbSk
     @SuppressLint("SetTextI18n")
     private void playGame(){
         imageView.setVisibility(View.VISIBLE);
