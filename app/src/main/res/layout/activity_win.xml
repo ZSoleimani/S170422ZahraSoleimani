@@ -7,33 +7,39 @@
     tools:context=".GameOver">
 
     <TextView
-        android:id="@+id/win"
-        android:layout_width="410dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
+        android:id="@+id/gameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
         android:gravity="center_horizontal"
-        android:text="@string/congrats_you_have_won"
-        android:textSize="36sp"
+        android:text="Congrats you are the Winnner"
+        android:textAlignment="center"
+        android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/nrOfTries"
-        android:layout_width="410dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="150dp"
+        android:id="@+id/theWordWas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="148dp"
         android:gravity="center_horizontal"
         android:text="@string/Number_of_tries"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="410dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
         android:text="word"
         android:textAlignment="center"
