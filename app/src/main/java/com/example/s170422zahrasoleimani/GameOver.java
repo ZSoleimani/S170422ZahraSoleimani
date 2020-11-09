@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 public class GameOver extends AppCompatActivity {
 
     private String getWord;
@@ -19,7 +20,7 @@ public class GameOver extends AppCompatActivity {
         setContentView(R.layout.activity_game_over);
 
         getWord = getIntent().getStringExtra("getWord");
-        getWordTextView = findViewById(R.id.theWord);
+        getWordTextView = findViewById(R.id.getNrOfWrongGuess);
 
         sharedPreferences = getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
         gameOver();
@@ -27,8 +28,9 @@ public class GameOver extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void gameOver() {
-        getWordTextView.setText(" "+ getWord);
+        getWordTextView.setText(" " + getWord);
     }
+}
 
 
     /*
@@ -54,4 +56,3 @@ public class GameOver extends AppCompatActivity {
 
      */
 
-}

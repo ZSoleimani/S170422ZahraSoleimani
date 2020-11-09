@@ -4,49 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameOver">
+    tools:context=".Win">
 
     <TextView
-        android:id="@+id/gameOver"
+        android:id="@+id/congrats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
-        android:gravity="center_horizontal"
-        android:text="Congrats you are the Winnner"
-        android:textAlignment="center"
-        android:textSize="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="28dp"
+
+        android:gravity="center"
+        android:text="Congrats, you are the winnr"
+        android:textSize="26sp"
+
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
 
     <TextView
-        android:id="@+id/theWordWas"
+        android:id="@+id/getNrOfWrongGuess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="148dp"
-        android:gravity="center_horizontal"
-        android:text="@string/Number_of_tries"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="580dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center_horizontal"
-        android:text="word"
-        android:textAlignment="center"
-        android:textSize="14sp"
+        android:layout_marginTop="24dp"
+        android:text="          "
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/nrOfWrongGuess"
+        tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/nrOfWrongGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="72dp"
+        android:text="Number of wrong guess:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/congrats"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

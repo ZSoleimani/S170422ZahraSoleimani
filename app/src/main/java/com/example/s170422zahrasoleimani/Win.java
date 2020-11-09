@@ -2,31 +2,34 @@ package com.example.s170422zahrasoleimani;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
 public class Win extends AppCompatActivity {
-    private int wrongWord;
-    private TextView wrongWordTextView ;
+  private int getNrOfWrongGuess;
+  private TextView getNrOfWrongGuessTextView;
 
-    SharedPreferences preferences;
+  SharedPreferences sharedPreferences;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_win);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.activity_win);
 
-        wrongWord = getIntent().getByteExtra("wrongWord", (byte) 0);
+      getNrOfWrongGuess = getIntent().getByteExtra("getNrOfWrongGuess", (byte) 0);
 
-        wrongWordTextView = findViewById(R.id.theWord);
-        preferences = getSharedPreferences("preferences", Context.MODE_PRIVATE);
+      getNrOfWrongGuessTextView = findViewById(R.id.getNrOfWrongGuess);
 
-        win();
-    }
+      sharedPreferences = getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
+      win();
+  }
 
+    @SuppressLint("SetTextI18n")
     private void win() {
-        wrongWordTextView.setText(""+wrongWord);
+      getNrOfWrongGuessTextView.setText("" +getNrOfWrongGuess);
     }
+
 }
