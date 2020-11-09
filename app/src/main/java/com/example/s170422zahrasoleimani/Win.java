@@ -18,7 +18,7 @@ public class Win extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_win);
 
-        getNrOfWrongGuessTextView = findViewById(R.id.nrOfWrongGuessid);
+        getNrOfWrongGuessTextView = findViewById(R.id.nr_of_wrong_guessid);
         Bundle bundle = getIntent().getExtras();
 
         String data = bundle.getString("getNrOfWrongGuess");

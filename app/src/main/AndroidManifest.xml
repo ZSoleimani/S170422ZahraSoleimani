@@ -5,14 +5,14 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="s170422 Zahra Soleimani Galgeleg"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.S170422ZahraSoleimani">
-        <activity android:name=".Main"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".GameOver" />
         <activity android:name=".Win" />
-        <activity android:name=".Game" />
+        <activity android:name=".GameActivity" />
         <activity android:name=".WelcomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

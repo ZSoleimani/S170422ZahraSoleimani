@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Main extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button gameStart;
 
@@ -22,7 +22,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v){
         if(v == gameStart){
 
-            Intent homeIntent = new Intent(Main.this, Game.class);
+            Intent homeIntent = new Intent(MainActivity.this, GameActivity.class);
             startActivity(homeIntent);
         }
     }

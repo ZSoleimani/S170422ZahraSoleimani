@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
-
 import java.util.Random;
-
 import android.annotation.SuppressLint;
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -17,7 +15,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Game extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity {
 
     private String[] words;
     private Random random;
@@ -76,7 +74,6 @@ public class Game extends AppCompatActivity {
         currentPic=0;
         nunChars=currentWord.length();
         numCorrect=0;
-
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -96,7 +93,7 @@ public class Game extends AppCompatActivity {
         if (correct){
             if (numCorrect==nunChars){
 
-                Intent win = new Intent(Game.this, Win.class);
+                Intent win = new Intent(GameActivity.this, Win.class);
                 win.putExtra("getNrOfWrongGuess",currentPic+"");
                 startActivity(win);
                 }
@@ -128,7 +125,7 @@ public class Game extends AppCompatActivity {
             currentPic++;
         }
         else{
-            Intent gameOver = new Intent(Game.this, GameOver.class);
+            Intent gameOver = new Intent(GameActivity.this, GameOver.class);
             gameOver.putExtra("getWord",currentWord);
 
             startActivity(gameOver);

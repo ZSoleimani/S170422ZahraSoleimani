@@ -2,7 +2,6 @@ package com.example.s170422zahrasoleimani;
 
 import android.os.Bundle;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class GameOver extends AppCompatActivity {
