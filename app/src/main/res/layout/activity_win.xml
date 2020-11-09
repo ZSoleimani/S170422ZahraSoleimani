@@ -7,56 +7,33 @@
     tools:context=".GameOver">
 
     <TextView
-        android:id="@+id/gameOver"
-        android:layout_width="289dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="60dp"
+        android:id="@+id/win"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
         android:text="@string/congrats_you_have_won"
-        android:textAlignment="center"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="68dp"
-        android:gravity="center_horizontal" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/theWordWas"
-        android:layout_width="171dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="156dp"
-        android:text="@string/Number_of_tries"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
-
-    <TextView
-        android:id="@+id/highscores"
-        android:layout_width="263dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="516dp"
-        android:layout_marginEnd="8dp"
+        android:id="@+id/nrOfTries"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="150dp"
         android:gravity="center_horizontal"
-        android:text="Incorrect guess nr."
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        android:text="@string/Number_of_tries"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="93dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="580dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="250dp"
         android:gravity="center_horizontal"
         android:text="word"
         android:textAlignment="center"
