@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 
-public class LetterAdapter extends BaseAdapter {
+public class Letter_Adapter extends BaseAdapter {
 
     private final String[] letters;
     private final LayoutInflater letterInflater;
 
-    public LetterAdapter(Context context){
+    public Letter_Adapter(Context context){
         letters=new String[26];
         for(int a=0; a<letters.length; a++){
             letters[a]=""+(char)(a+'A');

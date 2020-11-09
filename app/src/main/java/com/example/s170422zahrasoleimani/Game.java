@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 
 import java.util.Random;
-import androidx.appcompat.app.AlertDialog;
 
 import android.annotation.SuppressLint;
 import android.content.res.Resources;
@@ -18,7 +17,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class GameActivity extends AppCompatActivity {
+public class Game extends AppCompatActivity {
 
     private String[] words;
     private Random random;
@@ -71,7 +70,7 @@ public class GameActivity extends AppCompatActivity {
             wordLinearLayout.addView(charViews[c]);
         }
 
-        LetterAdapter letterAdapter = new LetterAdapter(this);
+        Letter_Adapter letterAdapter = new Letter_Adapter(this);
         letters.setAdapter(letterAdapter);
 
         currentPic=0;
@@ -97,24 +96,10 @@ public class GameActivity extends AppCompatActivity {
         if (correct){
             if (numCorrect==nunChars){
 
-                Intent win = new Intent(GameActivity.this, Win.class);
+                Intent win = new Intent(Game.this, Win.class);
                 win.putExtra("getNrOfWrongGuess",currentPic+"");
                 startActivity(win);
                 }
-                /*
-                disableButtons();
-
-                AlertDialog.Builder winBuild=new AlertDialog.Builder(this);
-
-                winBuild.setTitle("***Congrats***");
-                winBuild.setMessage("You Win! \n\n The answare was: "+ currentWord );
-                winBuild.setPositiveButton("Play Again",
-                        (dialogInterface, i) -> playGame());
-                winBuild.setNegativeButton("Exit",
-                (dialog, i) -> fileList())
-                winBuild.show();
-
-                 */
             }
 
 
@@ -143,7 +128,7 @@ public class GameActivity extends AppCompatActivity {
             currentPic++;
         }
         else{
-            Intent gameOver = new Intent(GameActivity.this, GameOver.class);
+            Intent gameOver = new Intent(Game.this, GameOver.class);
             gameOver.putExtra("getWord",currentWord);
 
             startActivity(gameOver);
