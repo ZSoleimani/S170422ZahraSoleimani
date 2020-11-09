@@ -20,8 +20,6 @@ import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
 
-    static Galgelogik galgelogik = new Galgelogik();
-
     private String[] words;
     private Random random;
     private String currentWord;
@@ -169,10 +167,13 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
+    /*
     private void disableButtons() {
         int numLetters=letters.getChildCount();
         for (int i=0; i<numLetters; i++) {
             letters.getChildAt(i).setEnabled(false);
         }
     }
+
+     */
 }
