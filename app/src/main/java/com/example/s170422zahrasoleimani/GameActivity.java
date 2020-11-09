@@ -26,12 +26,9 @@ public class GameActivity extends AppCompatActivity {
     private LinearLayout wordLinearLayout;
     private TextView[] charViews;
     private ImageView imageView;
-
     private GridView letters;
+    private int currentPic, nunChars,numCorrect;
 
-    private int currentPic;
-    private int nunChars;
-    private int numCorrect;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,34 +143,10 @@ public class GameActivity extends AppCompatActivity {
             currentPic++;
         }
         else{
-            /*
-            disableButtons();
-
-            AlertDialog.Builder loseBuild=new AlertDialog.Builder(this);
-
-            loseBuild.setMessage("Game over! \n\n The answare was: "+ currentWord );
-            loseBuild.setPositiveButton("Play Again",
-                    (dialogInterface, i) -> playGame());
-            loseBuild.setNegativeButton("Exit",
-                    (dialog, i) -> fileList());
-
-            loseBuild.show();
-             */
             Intent gameOver = new Intent(GameActivity.this, GameOver.class);
             gameOver.putExtra("getWord",currentWord);
 
             startActivity(gameOver);
-
         }
     }
-
-    /*
-    private void disableButtons() {
-        int numLetters=letters.getChildCount();
-        for (int i=0; i<numLetters; i++) {
-            letters.getChildAt(i).setEnabled(false);
-        }
-    }
-
-     */
 }
